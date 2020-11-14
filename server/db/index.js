@@ -8,6 +8,10 @@ const connection = mysql.createConnection({
   database: `${database}`
 });
 
+var server = {
+  port: 3000
+}
+
 connection.connect();
 
 module.exports = connection;
