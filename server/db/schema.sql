@@ -11,5 +11,5 @@ CREATE TABLE songs (
   song_length varchar(10) NOT NULL,
   song_url varchar(255) NOT NULL,
   image_url varchar(255) NOT NULL,
-  created_at timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+  created_at varchar(255) NOT NULL
 );
