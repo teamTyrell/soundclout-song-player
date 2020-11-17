@@ -1,0 +1,48 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import axios from 'axios';
+import Info from './Info.jsx';
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      index: 1,
+      song: {}
+    }
+  }
+
+  randomSong() {
+    this.setState({ index: Math.floor(Math.random() * Math.floor(99)) }, () => {
+      // console.log('new state: ', this.state.index);
+      const config = {
+        params: {
+          id: `${this.state.index}`
+        }
+      }
+      axios.get(`/api/songs/${this.state.index}`, config)
+        .then((response) => {
+          // console.log(response.data.data[0]);
+          this.setState({ song: response.data.data[0] })
+        })
+        .catch((error) => {
+          console.log('rats! ', error);
+        })
+    })
+  }
+
+  componentDidMount() {
+    this.randomSong();
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>TestingTestingTesting</h1>
+        <Info song={this.state.song} />
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<App />, document.getElementById('app'));
