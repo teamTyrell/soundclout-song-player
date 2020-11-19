@@ -12,7 +12,8 @@ import {
   Blank,
   WaveView,
   Image,
-  ReleaseGenre,
+  Release,
+  Genre,
   NameInfo
 } from './Styles.jsx';
 
@@ -31,9 +32,10 @@ export default class Info extends React.Component {
             <ArtistName>{this.props.song.artist_name}</ArtistName>
             <SongName>{this.props.song.song_name}</SongName>
             <InfoSpace></InfoSpace>
-            <ReleaseGenre>{this.props.song.genre}<br></br>
+            <Release>
               <ReleaseDate date={this.props.song.created_at}></ReleaseDate>
-            </ReleaseGenre>
+            </Release>
+            <Genre>#{this.props.song.genre}</Genre>
           </SongInfoDiv>
           <Blank><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br></Blank>
           <WaveView><br></br><br></br><br></br><br></br></WaveView>

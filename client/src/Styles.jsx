@@ -78,12 +78,27 @@ const ArtistName = styled.p`
   background: black;
 `;
 
-const ReleaseGenre = styled.p`
+const Release = styled.p`
   position: absolute;
-  top: 20px;
+  font-size: 20px;
+  top: 18px;
   right: 503px;
   color: white;
-  background: black;
+  text-alignment: left;
+`;
+
+const Genre = styled.p`
+border-radius: 25px;
+  height: 24px;
+  padding: 0 8px;
+  line-height: 24px;
+  font-size: 20px;
+  background: grey;
+  position: absolute;
+  top: 58px;
+  right: 503px;
+  color: white;
+  text-alignment: left;
 `;
 
 const Image = styled.img`
@@ -106,6 +121,7 @@ export {
   InfoSpace,
   Blank,
   WaveView,
-  ReleaseGenre,
+  Release,
+  Genre,
   Image
 }
