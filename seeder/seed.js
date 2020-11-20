@@ -77,3 +77,5 @@ for (let row of fakerData) {
 }
 
 db.end();
+
+module.exports = randomIndex;

@@ -1,4 +1,4 @@
-xdescribe("Suite Installation Check", () => {
+describe("Suite Installation Check", () => {
 
   test("it should pass for a passing test", () => {
     const input = [1, 2, 3];
@@ -11,7 +11,7 @@ xdescribe("Suite Installation Check", () => {
     expect(returnLastNum(input)).toEqual(output);
   });
 
-  test("it should fail for a failing test", () => {
+  xtest("it should fail for a failing test", () => {
     const input = [1, 2, 3, 4];
     const output = 3;
 
