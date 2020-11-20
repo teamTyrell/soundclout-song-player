@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
+import styled from 'styled-components';
 import Info from './Info.jsx';
 
 class App extends React.Component {
@@ -37,10 +38,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1>TestingTestingTesting</h1>
-        <Info song={this.state.song} />
-      </div>
+      <Info song={this.state.song}></Info>
     );
   }
 }
