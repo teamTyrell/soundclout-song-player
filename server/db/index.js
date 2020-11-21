@@ -3,8 +3,8 @@ const database = 'soundcloutsongplayer';
 
 const connection = mysql.createConnection({
   host: 'localhost',
-  user: 'root',
-  password: '',
+  user: 'hrr49-user',
+  password: 'hrr49',
   database: `${database}`
 });
 
