@@ -10,6 +10,9 @@ import {
   SongName,
   ArtistName,
   InfoSpace,
+  FlexEnd,
+  InfoColumnLeft,
+  InfoColumnRight,
   Blank,
   WaveView,
   Image,
@@ -41,15 +44,20 @@ export default class Info extends React.Component {
           <PlayerDiv>
             <SongInfoDiv>
               <Play src={`https://soundclout.s3.us-east-2.amazonaws.com/play+(1).png`}></Play>
-              <ArtistName>{this.props.song.artist_name}</ArtistName>
-              <SongName>{this.props.song.song_name}</SongName>
-              <InfoSpace></InfoSpace>
-              <Release>
-                <ReleaseDate date={this.props.song.created_at}></ReleaseDate>
-              </Release>
-              <Genre># {this.props.song.genre}</Genre>
+              <InfoColumnLeft>
+                <ArtistName>{this.props.song.artist_name}</ArtistName>
+                <SongName>{this.props.song.song_name}</SongName>
+              </InfoColumnLeft>
+              <FlexEnd>
+                <InfoColumnRight>
+                  <Release>
+                    <ReleaseDate date={this.props.song.created_at}></ReleaseDate>
+                  </Release>
+                  <Genre># {this.props.song.genre}</Genre>
+                </InfoColumnRight>
+              </FlexEnd>
             </SongInfoDiv>
-            <Blank><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br></Blank>
+            <Blank><br></br><br></br><br></br><br></br><br></br></Blank>
             <WaveView src={`https://soundclout.s3.us-east-2.amazonaws.com/soundcloud+wave.png`}></WaveView>
           </PlayerDiv>
           <div>

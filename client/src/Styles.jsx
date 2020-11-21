@@ -12,8 +12,9 @@ const Wrapper = styled.div`
   margin-left: 7%;
   margin-right: 7%;
   display: flex;
-  flexDirection: row;
+  flex-direction: row;
   height: 380px;
+  width: 1240px;
   background-color: grey;
   background-image: linear-gradient(to bottom right, 	#686868, gray);
   justify-content: space-between;
@@ -23,7 +24,7 @@ const Wrapper = styled.div`
 const PlayerDiv = styled.div`
   flex-basis: 3 1 auto;
   display: flex;
-  flexDirection: column;
+  flex-direction: column;
   padding-top: 30px;
   padding-left: 27px;
   flex-wrap: wrap;
@@ -44,7 +45,7 @@ const Play = styled.img`
 `;
 
 const InfoSpace = styled.div`
-  width: 550px;
+  width: 270px;
 `;
 
 const Blank = styled.div`
@@ -62,11 +63,25 @@ const SongName = styled.p`
   font-family: Interstate;
   line-height: 37px;
   padding: 4px 7px;
-  position: absolute;
-  left: 213px;
-  top: 38px;
+  // position: absolute;
+  // left: 213px;
+  // top: 38px;
   color: white;
   background: black;
+`;
+
+const InfoColumnLeft = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const FlexEnd = styled.div`
+  justify-self: end;
+`;
+
+const InfoColumnRight = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
 
 const ArtistName = styled.p`
@@ -74,9 +89,9 @@ const ArtistName = styled.p`
   font-family: Interstate;
   line-height: 1.2;
   padding: 2px 7px 3px;
-  position: absolute;
-  left: 213px;
-  top: 18px;
+  // position: absolute;
+  // left: 213px;
+  // top: 18px;
   color: white;
   background: black;
 `;
@@ -89,11 +104,11 @@ const CloseModal = styled.div`
 `;
 
 const Release = styled.p`
-  position: absolute;
+  // position: absolute;
   font-size: 20px;
   font-family: Interstate;
-  top: 18px;
-  right: 503px;
+  // top: 18px;
+  // right: 503px;
   color: white;
   text-alignment: left;
 `;
@@ -106,20 +121,21 @@ border-radius: 25px;
   font-size: 20px;
   font-family: Interstate;
   background: #999999;
-  position: absolute;
-  top: 58px;
-  right: 503px;
+  // position: absolute;
+  // top: 58px;
+  // right: 503px;
   color: white;
   text-alignment: left;
 `;
 
 const Image = styled.img`
-  position: absolute;
-  top: 32px;
-  right: 130px;
+  // position: absolute;
+  // top: 32px;
+  // right: 130px;
   object-fit: cover;
   width:340px;
   height:340px;
+
 `;
 
 const Modal = styled.div`
@@ -157,6 +173,9 @@ export {
   SongName,
   ArtistName,
   InfoSpace,
+  FlexEnd,
+  InfoColumnLeft,
+  InfoColumnRight,
   Blank,
   WaveView,
   Release,
