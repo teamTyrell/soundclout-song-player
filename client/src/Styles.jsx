@@ -9,8 +9,7 @@ const Title = styled.h1`
 
 // Create a Wrapper component that'll render a <section> tag with some styles
 const Wrapper = styled.div`
-  margin-left: 7%;
-  margin-right: 7%;
+  margin: auto;
   display: flex;
   flex-direction: row;
   height: 380px;
