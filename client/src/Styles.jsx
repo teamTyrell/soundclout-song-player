@@ -34,9 +34,9 @@ const PlayerDiv = styled.div`
 
 const SongInfoDiv = styled.div`
   width: 100%;
+  height: 215px;
   display: flex;
   flexDirection: row;
-  align-items: flex-start;
 `;
 
 const Play = styled.img`
@@ -56,9 +56,12 @@ const WaveView = styled.img`
   width: 815px;
   height: 100px;
   order: 3;
+  justify-self: flex-end;
 `;
 
 const SongName = styled.p`
+  margin-top: 0px;
+  margin-bottom: 0px;
   font-size: 24px;
   font-family: Interstate;
   line-height: 37px;
@@ -71,12 +74,14 @@ const SongName = styled.p`
 `;
 
 const InfoColumnLeft = styled.div`
+  margin-left: 9px;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 `;
 
 const FlexEnd = styled.div`
-  justify-self: end;
+  margin-left: auto;
 `;
 
 const InfoColumnRight = styled.div`
@@ -85,6 +90,8 @@ const InfoColumnRight = styled.div`
 `;
 
 const ArtistName = styled.p`
+  margin-top: 0px;
+  margin-bottom: 5px;
   font-size: 16px;
   font-family: Interstate;
   line-height: 1.2;
@@ -104,6 +111,9 @@ const CloseModal = styled.div`
 `;
 
 const Release = styled.p`
+  align-self: flex-end;
+  margin-top: 0px;
+  margin-bottom: 18px;
   // position: absolute;
   font-size: 20px;
   font-family: Interstate;
@@ -114,6 +124,9 @@ const Release = styled.p`
 `;
 
 const Genre = styled.p`
+align-self: flex-end;
+margin-top: 0px;
+  margin-bottom: 0px;
 border-radius: 25px;
   height: 24px;
   padding: 0 8px;
@@ -129,6 +142,8 @@ border-radius: 25px;
 `;
 
 const Image = styled.img`
+  margin-top: 20px;
+  margin-right: 20px;
   // position: absolute;
   // top: 32px;
   // right: 130px;

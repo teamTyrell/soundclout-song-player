@@ -57,7 +57,6 @@ export default class Info extends React.Component {
                 </InfoColumnRight>
               </FlexEnd>
             </SongInfoDiv>
-            <Blank><br></br><br></br><br></br><br></br><br></br></Blank>
             <WaveView src={`https://soundclout.s3.us-east-2.amazonaws.com/soundcloud+wave.png`}></WaveView>
           </PlayerDiv>
           <div>
