@@ -1,5 +1,5 @@
 const mysql = require('mysql');
-const database = 'soundclout';
+const database = 'soundcloutsongplayer';
 
 const connection = mysql.createConnection({
   host: 'localhost',
