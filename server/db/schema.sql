@@ -1,7 +1,7 @@
-DROP DATABASE IF EXISTS soundclout;
-CREATE DATABASE soundclout;
+DROP DATABASE IF EXISTS soundcloutsongplayer;
+CREATE DATABASE soundcloutsongplayer;
 
-USE soundclout;
+USE soundcloutsongplayer;
 
 CREATE TABLE songs (
   id INT PRIMARY KEY UNIQUE AUTO_INCREMENT,
