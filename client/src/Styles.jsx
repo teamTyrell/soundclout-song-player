@@ -14,7 +14,8 @@ const Wrapper = styled.div`
   display: flex;
   flexDirection: row;
   height: 380px;
-  background: orange;
+  background-color: grey;
+  background-image: linear-gradient(to bottom right, 	#686868, gray);
   justify-content: space-between;
   align-items: flex-start;
 `;
@@ -24,7 +25,7 @@ const PlayerDiv = styled.div`
   display: flex;
   flexDirection: column;
   padding-top: 30px;
-  padding-left: 35px;
+  padding-left: 27px;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: flex-start;
@@ -50,14 +51,15 @@ const Blank = styled.div`
   width: 100%;
 `;
 
-const WaveView = styled.div`
-  width: 100%;
+const WaveView = styled.img`
+  width: 815px;
+  height: 100px;
   order: 3;
-  background: pink;
 `;
 
 const SongName = styled.p`
   font-size: 24px;
+  font-family: Interstate;
   line-height: 37px;
   padding: 4px 7px;
   position: absolute;
@@ -69,6 +71,7 @@ const SongName = styled.p`
 
 const ArtistName = styled.p`
   font-size: 16px;
+  font-family: Interstate;
   line-height: 1.2;
   padding: 2px 7px 3px;
   position: absolute;
@@ -78,9 +81,17 @@ const ArtistName = styled.p`
   background: black;
 `;
 
+const CloseModal = styled.div`
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 30px;
+`;
+
 const Release = styled.p`
   position: absolute;
   font-size: 20px;
+  font-family: Interstate;
   top: 18px;
   right: 503px;
   color: white;
@@ -93,7 +104,8 @@ border-radius: 25px;
   padding: 0 8px;
   line-height: 24px;
   font-size: 20px;
-  background: grey;
+  font-family: Interstate;
+  background: #999999;
   position: absolute;
   top: 58px;
   right: 503px;
@@ -110,6 +122,32 @@ const Image = styled.img`
   height:340px;
 `;
 
+const Modal = styled.div`
+  background-color: #FFF;
+  padding: 50px;
+  z-index: 1000;
+`
+
+const Overlay = styled.div`
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, .7);
+  z-index: 1000;
+`;
+
+
+const ModalImage = styled.img`
+  object-fit: cover;
+  width: 500px;
+  height: 500px;
+`;
+
 export {
   Title,
   Wrapper,
@@ -123,5 +161,9 @@ export {
   WaveView,
   Release,
   Genre,
-  Image
+  Image,
+  Modal,
+  Overlay,
+  ModalImage,
+  CloseModal
 }
