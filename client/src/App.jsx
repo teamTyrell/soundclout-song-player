@@ -21,9 +21,9 @@ class App extends React.Component {
           id: `${this.state.index}`
         }
       }
-      axios.get(`/api/songs/${this.state.index}`, config)
+      axios.get(`/api/library/${this.state.index}`, config)
         .then((response) => {
-          // console.log(response.data.data[0]);
+          console.log(response);
           this.setState({ song: response.data.data[0] })
         })
         .catch((error) => {
