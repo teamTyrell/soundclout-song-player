@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const db = require('./index.js');
 
 // get all song data in database
-router.get('/songs/:id', function(req, res) {
+router.get('/library/:id', function(req, res) {
   console.log(req.params.id);
   let queryStr = `SELECT * FROM songs WHERE id = ${req.params.id}`;
   db.query(queryStr, function(err, data) {
