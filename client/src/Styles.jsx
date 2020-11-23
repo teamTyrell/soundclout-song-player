@@ -1,12 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Title = styled.h1`
-  font-size: 1.5em;
-  text-align: center;
-  color: black;
-`;
-
 // Create a Wrapper component that'll render a <section> tag with some styles
 const Wrapper = styled.div`
   margin: auto;
@@ -43,14 +37,6 @@ const Play = styled.img`
   height: 60px;
 `;
 
-const InfoSpace = styled.div`
-  width: 270px;
-`;
-
-const Blank = styled.div`
-  width: 100%;
-`;
-
 const WaveView = styled.img`
   width: 815px;
   height: 100px;
@@ -65,9 +51,6 @@ const SongName = styled.p`
   font-family: Interstate;
   line-height: 37px;
   padding: 4px 7px;
-  // position: absolute;
-  // left: 213px;
-  // top: 38px;
   color: white;
   background: black;
 `;
@@ -95,9 +78,6 @@ const ArtistName = styled.p`
   font-family: Interstate;
   line-height: 1.2;
   padding: 2px 7px 3px;
-  // position: absolute;
-  // left: 213px;
-  // top: 18px;
   color: white;
   background: black;
 `;
@@ -113,29 +93,23 @@ const Release = styled.p`
   align-self: flex-end;
   margin-top: 0px;
   margin-bottom: 18px;
-  // position: absolute;
   font-size: 20px;
   font-family: Interstate;
-  // top: 18px;
-  // right: 503px;
   color: white;
   text-alignment: left;
 `;
 
 const Genre = styled.p`
-align-self: flex-end;
-margin-top: 0px;
+  align-self: flex-end;
+  margin-top: 0px;
   margin-bottom: 0px;
-border-radius: 25px;
+  border-radius: 25px;
   height: 24px;
   padding: 0 8px;
   line-height: 24px;
   font-size: 20px;
   font-family: Interstate;
   background: #999999;
-  // position: absolute;
-  // top: 58px;
-  // right: 503px;
   color: white;
   text-alignment: left;
 `;
@@ -143,9 +117,6 @@ border-radius: 25px;
 const Image = styled.img`
   margin-top: 20px;
   margin-right: 20px;
-  // position: absolute;
-  // top: 32px;
-  // right: 130px;
   object-fit: cover;
   width:340px;
   height:340px;
@@ -153,21 +124,23 @@ const Image = styled.img`
 `;
 
 const Modal = styled.div`
+  margin-top: 76px;
+  padding: 25px;
   background-color: #FFF;
-  padding: 50px;
   z-index: 1000;
+  left: 445px;
+  height: auto;
 `
 
 const Overlay = styled.div`
   position: absolute;
   display: flex;
   justify-content: center;
-  align-items: center;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(255, 255, 255, .7);
+  background-color: hsla(0,0%,94.9%,.9);
   z-index: 1000;
 `;
 
@@ -178,19 +151,25 @@ const ModalImage = styled.img`
   height: 500px;
 `;
 
+const ModalTitle = styled.h1`
+  font-family: Interstate;
+  font-size: 22px;
+  line-height: 1;
+  padding-bottom: 9px;
+  border-bottom: 1px solid #f2f2f2;
+  margin-bottom: 24px;
+`;
+
 export {
-  Title,
   Wrapper,
   PlayerDiv,
   SongInfoDiv,
   Play,
   SongName,
   ArtistName,
-  InfoSpace,
   FlexEnd,
   InfoColumnLeft,
   InfoColumnRight,
-  Blank,
   WaveView,
   Release,
   Genre,
@@ -198,5 +177,6 @@ export {
   Modal,
   Overlay,
   ModalImage,
-  CloseModal
+  CloseModal,
+  ModalTitle
 }

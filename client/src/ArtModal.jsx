@@ -5,22 +5,25 @@ import {
   Modal,
   Overlay,
   ModalImage,
-  CloseModal
+  CloseModal,
+  ModalTitle
 } from './Styles.jsx';
 
 export default function ArtModal(props) {
   if (!props.open) return null
   return (
     <Overlay>
+      <div>
       <Modal>
         <CloseModal onClick={props.closeModal}>X</CloseModal>
         <div>
-          {props.name}
+          <ModalTitle>{props.name}</ModalTitle>
         </div>
         <div>
           <ModalImage src={props.image}></ModalImage>
         </div>
       </Modal>
+      </div>
     </Overlay>
   )
 }
