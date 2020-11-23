@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import ReleaseDate from './ReleaseDate.jsx';
 import ArtModal from './ArtModal.jsx';
+import Music from './Music.jsx';
 import {
   Wrapper,
   PlayerDiv,
@@ -63,6 +64,7 @@ export default class Info extends React.Component {
             <Image src={this.props.song.image_url && this.props.song.image_url} onClick={this.onImageClick}></Image>
           </div>
         </Wrapper>
+        <Music currentSong={this.props.song.song_url}></Music>
       </div>
     );
   }

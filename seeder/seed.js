@@ -65,7 +65,7 @@ for (let row of fakerData) {
   let image_url = row.image_url;
   let created_at = row.created_at;
 
-  let query = `INSERT INTO songs (song_name, artist_name, genre, song_length, song_url, image_url, created_at) VALUES ('${song_name}', '${artist_name}', '${genre}', '${song_length}', '${song_url}', '${image_url}', '${created_at}')`
+  let query = `INSERT INTO library (song_name, artist_name, genre, song_length, song_url, image_url, created_at) VALUES ('${song_name}', '${artist_name}', '${genre}', '${song_length}', '${song_url}', '${image_url}', '${created_at}')`
 
   db.query(query, (err, res) => {
     if (err) {
