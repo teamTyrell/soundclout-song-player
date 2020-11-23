@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import ReleaseDate from './ReleaseDate.jsx';
 import ArtModal from './ArtModal.jsx';
-import Music from './Music.jsx';
 import {
   Wrapper,
   PlayerDiv,
@@ -33,6 +32,7 @@ export default class Info extends React.Component {
   }
 
   onImageClick() {
+
     this.setState((state) => ({
       modal: !state.modal
     }));

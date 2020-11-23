@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 // Create a Wrapper component that'll render a <section> tag with some styles
 const Wrapper = styled.div`
@@ -109,9 +109,12 @@ const Genre = styled.p`
   line-height: 24px;
   font-size: 20px;
   font-family: Interstate;
-  background: #999999;
+  background: #999;
   color: white;
   text-alignment: left;
+  :hover {
+    background: #333;
+  }
 `;
 
 const Image = styled.img`
@@ -120,17 +123,23 @@ const Image = styled.img`
   object-fit: cover;
   width:340px;
   height:340px;
+`;
 
+const ModalDrop = keyframes`
+  0% { margin-top: -800px; }
+  100% { margin-top: 76px; }
 `;
 
 const Modal = styled.div`
   margin-top: 76px;
+  justify-content: center;
   padding: 25px;
   background-color: #FFF;
-  z-index: 1000;
+  z-index: 100;
   left: 445px;
   height: auto;
-`
+  animation: ${ModalDrop} 0.4s 0s cubic-bezier(.13,1.07,.5,1.01);
+`;
 
 const Overlay = styled.div`
   position: absolute;
@@ -141,7 +150,7 @@ const Overlay = styled.div`
   right: 0;
   bottom: 0;
   background-color: hsla(0,0%,94.9%,.9);
-  z-index: 1000;
+  z-index: 50;
 `;
 
 
@@ -151,10 +160,11 @@ const ModalImage = styled.img`
   height: 500px;
 `;
 
-const ModalTitle = styled.h1`
+const ModalTitle = styled.p`
   font-family: Interstate;
   font-size: 22px;
   line-height: 1;
+  margin-top: 0px;
   padding-bottom: 9px;
   border-bottom: 1px solid #f2f2f2;
   margin-bottom: 24px;

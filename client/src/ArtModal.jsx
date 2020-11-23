@@ -12,17 +12,19 @@ import {
 export default function ArtModal(props) {
   if (!props.open) return null
   return (
-    <Overlay>
+    <Overlay onClick={props.closeModal}>
+      <CloseModal>X</CloseModal>
       <div>
-      <Modal>
-        <CloseModal onClick={props.closeModal}>X</CloseModal>
-        <div>
-          <ModalTitle>{props.name}</ModalTitle>
-        </div>
-        <div>
-          <ModalImage src={props.image}></ModalImage>
-        </div>
-      </Modal>
+        <Modal onClick={(e) => {
+          e.stopPropagation ? e.stopPropagation() : console.log(e);
+        }}>
+          <div>
+            <ModalTitle>{props.name}</ModalTitle>
+          </div>
+          <div>
+            <ModalImage src={props.image}></ModalImage>
+          </div>
+        </Modal>
       </div>
     </Overlay>
   )
