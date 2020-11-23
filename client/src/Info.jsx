@@ -65,7 +65,7 @@ export default class Info extends React.Component {
     return (
       <div>
         <ArtModal margin={this.state.margin} open={this.state.modal} closeModal={this.onImageClick} image={this.props.song.image_url && this.props.song.image_url} name={this.props.song.song_name}></ArtModal>
-        <Wrapper>
+        <Wrapper url={this.props.song.image_url}>
           <PlayerDiv>
             <SongInfoDiv>
               <Play onClick={this.play} src={`https://soundclout.s3.us-east-2.amazonaws.com/play+(1).png`}></Play>

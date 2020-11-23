@@ -9,7 +9,7 @@ const connection = mysql.createConnection({
 });
 
 var server = {
-  port: 3000
+  port: 3001
 }
 
 connection.connect();

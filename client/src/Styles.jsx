@@ -3,15 +3,20 @@ import styled, { keyframes } from 'styled-components';
 
 // Create a Wrapper component that'll render a <section> tag with some styles
 const Wrapper = styled.div`
+  z-index: 1;
   margin: auto;
   display: flex;
   flex-direction: row;
   height: 380px;
   width: 1240px;
   background-color: grey;
-  background-image: linear-gradient(to bottom right, 	#686868, gray);
+  background-position: center center;
   justify-content: space-between;
   align-items: flex-start;
+  backdrop-filter: blur(20px);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.73)), url(${props => props.url});
+  background-repeat: no-repeat;
+  background-size: cover;
 `;
 
 const PlayerDiv = styled.div`
@@ -33,11 +38,13 @@ const SongInfoDiv = styled.div`
 `;
 
 const Play = styled.img`
+  z-index: 10;
   width: 60px;
   height: 60px;
 `;
 
 const WaveView = styled.img`
+  z-index: 10;
   width: 815px;
   height: 100px;
   order: 3;
@@ -126,8 +133,12 @@ const Image = styled.img`
 `;
 
 const ModalDrop = (margin) => keyframes`
-  0% { margin-top: ${margin ? -800 : 76}px }
-  100% { margin-top: ${margin ? 76 : -800}px }
+  0% {
+    margin-top: ${margin ? -800 : 76}px
+  }
+  100% {
+    margin-top: ${margin ? 76 : -800}px;
+  }
 `;
 
 const Modal = styled.div`
