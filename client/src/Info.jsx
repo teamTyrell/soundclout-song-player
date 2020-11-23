@@ -25,16 +25,25 @@ export default class Info extends React.Component {
       modal: false,
       status: false,
       play: false,
-      pause: true
+      pause: true,
+      margin: false
     }
     this.play = this.play.bind(this);
     this.onImageClick = this.onImageClick.bind(this);
   }
 
   onImageClick() {
-
+    if (this.state.modal) {
+      setTimeout(() => {
+        this.setState((state) => ({
+          modal: false,
+          margin: state.margin
+        }));
+      }, 375)
+    }
     this.setState((state) => ({
-      modal: !state.modal
+      modal: true,
+      margin: !state.margin
     }));
   }
 
@@ -55,7 +64,7 @@ export default class Info extends React.Component {
   render() {
     return (
       <div>
-        <ArtModal open={this.state.modal} closeModal={this.onImageClick} image={this.props.song.image_url && this.props.song.image_url} name={this.props.song.song_name}></ArtModal>
+        <ArtModal margin={this.state.margin} open={this.state.modal} closeModal={this.onImageClick} image={this.props.song.image_url && this.props.song.image_url} name={this.props.song.song_name}></ArtModal>
         <Wrapper>
           <PlayerDiv>
             <SongInfoDiv>

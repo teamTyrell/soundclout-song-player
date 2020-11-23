@@ -125,9 +125,9 @@ const Image = styled.img`
   height:340px;
 `;
 
-const ModalDrop = keyframes`
-  0% { margin-top: -800px; }
-  100% { margin-top: 76px; }
+const ModalDrop = (margin) => keyframes`
+  0% { margin-top: ${margin ? -800 : 76}px }
+  100% { margin-top: ${margin ? 76 : -800}px }
 `;
 
 const Modal = styled.div`
@@ -138,7 +138,7 @@ const Modal = styled.div`
   z-index: 100;
   left: 445px;
   height: auto;
-  animation: ${ModalDrop} 0.4s 0s cubic-bezier(.13,1.07,.5,1.01);
+  animation: ${props => ModalDrop(props.margin)} 0.4s 0s cubic-bezier(.13,1.07,.5,1.01);
 `;
 
 const Overlay = styled.div`

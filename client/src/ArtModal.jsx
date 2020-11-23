@@ -15,7 +15,7 @@ export default function ArtModal(props) {
     <Overlay onClick={props.closeModal}>
       <CloseModal>X</CloseModal>
       <div>
-        <Modal onClick={(e) => {
+        <Modal margin={props.margin} onClick={(e) => {
           e.stopPropagation ? e.stopPropagation() : console.log(e);
         }}>
           <div>
