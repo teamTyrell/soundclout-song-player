@@ -13,7 +13,6 @@ const Wrapper = styled.div`
   background-position: center center;
   justify-content: space-between;
   align-items: flex-start;
-  backdrop-filter: blur(20px);
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.73)), url(${props => props.url});
   background-repeat: no-repeat;
   background-size: cover;
