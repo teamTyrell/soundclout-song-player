@@ -4,7 +4,7 @@ const database = 'soundcloutsongplayer';
 const connection = mysql.createConnection({
   host: 'localhost',
   user: 'hrr49-user',
-  password: 'hrr49',
+  password: 'Pine@pple49',
   database: `${database}`
 });
 
