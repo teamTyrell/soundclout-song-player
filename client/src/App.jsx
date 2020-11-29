@@ -14,7 +14,7 @@ class App extends React.Component {
   }
 
   randomSong() {
-    this.setState({ index: Math.floor(Math.random() * Math.floor(99)) }, () => {
+    this.setState({ index: Math.floor(Math.random() * Math.floor(98)) }, () => {
       // console.log('new state: ', this.state.index);
       const config = {
         params: {
