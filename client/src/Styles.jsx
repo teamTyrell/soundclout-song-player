@@ -42,12 +42,47 @@ const Play = styled.img`
   height: 60px;
 `;
 
-const WaveView = styled.img`
+const WaveProgress = () => keyframes`
+  0% { width: 0px; }
+  100% { width: 100%; }
+`;
+
+const WaveView = styled.div`
   z-index: 10;
   width: 815px;
   height: 100px;
   order: 3;
+  position: relative;
   justify-self: flex-end;
+`;
+
+const Wave = styled.img`
+  z-index: 10;
+  width: 815px;
+  height: 100px;
+  overflow: hidden;
+  object-fit: cover;
+`;
+
+const FilledWave = styled.img`
+  z-index: 25;
+  width: 815px;
+  height: 100px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  object-fit: cover;
+`;
+
+const FilledDiv = styled.div`
+  width: 100%;
+  height: 100%;
+  top: 0;
+  position: absolute;
+  overflow: hidden;
+  object-fit: cover;
+  animation: ${WaveProgress} ${props => props.duration}s linear;
+  animation-play-state: ${props => props.status ? 'running' : 'paused'};
 `;
 
 const SongName = styled.p`
@@ -191,6 +226,9 @@ export {
   InfoColumnLeft,
   InfoColumnRight,
   WaveView,
+  Wave,
+  FilledWave,
+  FilledDiv,
   Release,
   Genre,
   Image,
