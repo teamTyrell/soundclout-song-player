@@ -1,8 +1,8 @@
 DROP DATABASE IF EXISTS soundcloutsongplayer;
 CREATE DATABASE soundcloutsongplayer;
 
-CREATE USER 'hrr49-user'@'localhost' IDENTIFIED BY 'Pine@pple49';
-GRANT ALL PRIVILEGES ON soundcloutsongplayer.* TO 'hrr49-user'@'localhost';
+-- CREATE USER 'hrr49-user'@'localhost' IDENTIFIED BY 'Pine@pple49';
+-- GRANT ALL PRIVILEGES ON soundcloutsongplayer.* TO 'hrr49-user'@'localhost';
 
 USE soundcloutsongplayer;
 

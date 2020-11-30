@@ -13,6 +13,9 @@ import {
   InfoColumnLeft,
   InfoColumnRight,
   WaveView,
+  Wave,
+  FilledWave,
+  FilledDiv,
   Image,
   Release,
   Genre
@@ -26,7 +29,9 @@ export default class Info extends React.Component {
       status: false,
       play: false,
       pause: true,
-      margin: false
+      progress: false,
+      margin: false,
+      duration: 200
     }
     this.play = this.play.bind(this);
     this.onImageClick = this.onImageClick.bind(this);
@@ -47,17 +52,20 @@ export default class Info extends React.Component {
     }));
   }
 
+
+
   play() {
     if (!this.state.status) {
-      this.setState({ status: true })
       this.audio = new Audio(this.props.song.song_url);
       this.audio.play();
+      this.setState({ status: true, progress: true, duration: this.audio.duration || 200 });
       return;
     }
-    this.setState(state => ({ play: !state.play, pause: !state.pause }))
+    this.setState(state => ({ play: !state.play, pause: !state.pause, progress: !state.progress, duration: this.audio.duration || 200 }))
     // console.log(this.audio);
     // console.log(this.url);
     // console.log(this.props.currentSong);
+    console.log(this.audio.duration);
     this.state.play ? this.audio.play() : this.audio.pause();
   }
 
@@ -82,7 +90,12 @@ export default class Info extends React.Component {
                 </InfoColumnRight>
               </FlexEnd>
             </SongInfoDiv>
-            <WaveView src={`https://soundclout.s3.us-east-2.amazonaws.com/soundcloud+wave.png`}></WaveView>
+            <WaveView>
+              <Wave src={`https://soundclout.s3.us-east-2.amazonaws.com/soundcloud+wave.png`}></Wave>
+              <FilledDiv status={this.state.progress} duration={this.state.duration} >
+              <FilledWave src={`https://soundclout.s3.us-east-2.amazonaws.com/soundcloud+orange+wave.png`}></FilledWave>
+              </FilledDiv>
+            </WaveView>
           </PlayerDiv>
           <div>
             <Image src={this.props.song.image_url && this.props.song.image_url} onClick={this.onImageClick}></Image>
